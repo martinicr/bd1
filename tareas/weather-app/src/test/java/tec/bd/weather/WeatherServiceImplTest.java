@@ -12,10 +12,10 @@ public class WeatherServiceImplTest {
         var weatherService = new WeatherServiceImpl();
 
         // Act
-        var actual = weatherService.getTemperature("Alajuela");
+        var actual = weatherService.getCityTemperature("Alajuela");
 
         // Assert
-        assertThat(actual).isEqualTo(22.0f);
+        assertThat(actual).isEqualTo(23.0f);
     }
 
 }

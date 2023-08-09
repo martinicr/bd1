@@ -16,9 +16,17 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>14</maven.compiler.source>
     <maven.compiler.target>14</maven.compiler.target>
+
+    <picocli.version>4.6.1</picocli.version>
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>info.picocli</groupId>
+      <artifactId>picocli</artifactId>
+      <version>${picocli.version}</version>
+    </dependency>
 
     <!-- Test dependencies -->
     <dependency>

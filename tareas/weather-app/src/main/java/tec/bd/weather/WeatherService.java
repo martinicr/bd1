@@ -2,6 +2,6 @@ package tec.bd.weather;
 
 public interface WeatherService {
 
-    float getTemperature(String city);
-
+    float getCityTemperature(String city);
+    float getZipCodeTemperature(String zipCode);
 }
