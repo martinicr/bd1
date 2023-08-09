@@ -6,7 +6,7 @@
 
   <groupId>tec.bd</groupId>
   <artifactId>weather-app</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>weather-app</name>
   <!-- FIXME change it to the project's website -->
