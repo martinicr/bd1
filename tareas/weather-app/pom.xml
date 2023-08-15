@@ -13,7 +13,6 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/martinicr/bd1.git</developerConnection>
-    <tag>weather-app-1.0.1</tag>
   </scm>
 
   <properties>
