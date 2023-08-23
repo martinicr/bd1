@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import tec.bd.weather.entity.Forecast;
 import tec.bd.weather.repository.InMemoryForecastRepository;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +20,7 @@ public class WeatherServiceImplTest {
         // Arrange
         var forecastRepository = mock(InMemoryForecastRepository.class);
         var weatherService = new WeatherServiceImpl(forecastRepository);
-        var forecast = mock(Forecast.class);
+        var forecast = mock(Forecast.class); // new Forecast(..,..,..,..,..)
 
         given(forecast.getCityName()).willReturn("Alajuela");
         given(forecast.getTemperature()).willReturn(23.0f);
@@ -30,6 +31,7 @@ public class WeatherServiceImplTest {
 
         // Assert
         verify(forecastRepository, times(1)).findAll();
+        verify(forecast, times(1)).getCityName();
         verify(forecast, times(1)).getTemperature();
 
         assertThat(actual).isEqualTo(23.0f);
@@ -38,7 +40,22 @@ public class WeatherServiceImplTest {
     //TODO: Implementar
     @Test
     public void GivenACity_WhenCityIsNotSupported_ThenException() {
+        // Arrange
+        var forecastRepository = mock(InMemoryForecastRepository.class);
+        var weatherService = new WeatherServiceImpl(forecastRepository);
 
+        given(forecastRepository.findAll()).willReturn(Collections.emptyList());
+
+        // Act
+        try {
+            weatherService.getCityTemperature("Alajuela");
+            fail("We shouldn't reach this line!");
+        } catch (Exception e) {
+
+        }
+
+        // Assert
+        verify(forecastRepository, times(1)).findAll();
     }
 
     @Test
@@ -89,6 +106,39 @@ public class WeatherServiceImplTest {
     }
 
     // TODO: prueba unitaria para probar que una actualización es exitosa
+
+    @Test
+    public void GivenValidForecast_WhenUpdatingTemperature_ThenNewTemperature() {
+
+        // Arrange
+        var currentForecast = new Forecast(5, "Costa Rica", "Limon", "33122", new Date(), 23.0f);
+        var forecastToBeUpdated = new Forecast(5, "Costa Rica", "Limon", "33122", new Date(), 19.0f);
+        var forecastRepository = mock(InMemoryForecastRepository.class);
+
+        given(forecastRepository.findById(anyInt())).willReturn(Optional.of(currentForecast));
+        given(forecastRepository.update(forecastToBeUpdated)).willReturn(forecastToBeUpdated);
+        given(forecastRepository.findAll()).willReturn(List.of(currentForecast));
+
+        var weatherService = new WeatherServiceImpl(forecastRepository);
+
+        // Act
+        // 1.
+        var oldForecast = weatherService.getCityTemperature("Limon");
+        // 2.
+        var actual = weatherService.updateForecast(forecastToBeUpdated);
+
+        // Assert
+        verify(forecastRepository, times(1)).findById(5);
+        verify(forecastRepository, times(1)).update(forecastToBeUpdated);
+
+        assertThat(actual).isNotSameAs(oldForecast);
+
+        assertThat(actual.getId()).isEqualTo(5);
+        assertThat(actual.getZipCode()).isEqualTo("33122");
+        assertThat(actual.getCountryName()).isEqualTo("Costa Rica");
+        assertThat(actual.getCityName()).isEqualTo("Limon");
+        assertThat(actual.getTemperature()).isEqualTo(19.0f);
+    }
 
     // TODO: prueba unitaria para probar que un Forecast que NO exista no pueda ser actualizado
 
