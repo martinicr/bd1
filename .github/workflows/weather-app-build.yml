@@ -9,7 +9,7 @@ on:
 
     paths:
       - weather-app/**
-      - .github/workflows/weather-report-build.yml 
+      - .github/workflows/weather-app-build.yml 
 
 # Trabajos
 
@@ -40,7 +40,7 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
       - name: Publish JAR Dry Run
-        run: mvn -B release:prepare release:perform -DdryRun --file tareas/weather-report/pom.xml
+        run: mvn -B release:prepare release:perform -DdryRun --file tareas/weather-app/pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
