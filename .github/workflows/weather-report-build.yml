@@ -34,13 +34,13 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
-        run: mvn -B package assembly:single --file weather-app/pom.xml
+        run: mvn -B package assembly:single --file tareas/weather-app/pom.xml
       - name: Configure Git user
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
       - name: Publish JAR Dry Run
-        run: mvn -B release:prepare release:perform -DdryRun --file weather-report/pom.xml
+        run: mvn -B release:prepare release:perform -DdryRun --file tareas/weather-report/pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 

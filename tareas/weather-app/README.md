@@ -1,6 +1,9 @@
 Weather-App
 ===========
 
+git s[![Weather-App Build Pipeline](https://github.com/martinicr/bd1/actions/workflows/weather-report-build.yml/badge.svg)](https://github.com/martinicr/bd1/actions/workflows/weather-report-build.yml)
+
+
 Aplicacion para obtener y publicar pronosticos el clima.
 
 ## Intrucciones de construcción:
