@@ -11,10 +11,10 @@ public class InMemoryForecastRepository implements Repository<Forecast, Integer>
     public InMemoryForecastRepository() {
         // "inicializando" la base de datos
         this.inMemoryForecasData = new HashSet<>();
-        this.inMemoryForecasData.add(new Forecast(1, "Costa Rica", "Alajuela", "10101", 23.0f));
-        this.inMemoryForecasData.add(new Forecast(2, "Costa Rica", "Cartago", "20201", 24.0f));
-        this.inMemoryForecasData.add(new Forecast(3, "Costa Rica", "San Jose", "30301", 25.0f));
-        this.inMemoryForecasData.add(new Forecast(4, "Costa Rica", "Limon", "40401", 25.0f));
+        this.inMemoryForecasData.add(new Forecast(1, "Costa Rica", "Alajuela", "10101", new Date(), 23.0f));
+        this.inMemoryForecasData.add(new Forecast(2, "Costa Rica", "Cartago", "20201", new Date(), 24.0f));
+        this.inMemoryForecasData.add(new Forecast(3, "Costa Rica", "San Jose", "30301", new Date(), 25.0f));
+        this.inMemoryForecasData.add(new Forecast(4, "Costa Rica", "Limon", "40401", new Date(), 25.0f));
     }
 
     @Override

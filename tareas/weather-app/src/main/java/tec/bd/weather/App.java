@@ -13,5 +13,6 @@ public class App {
         if (args.length == 0) {
             cmd.usage(System.out);
         }
+
     }
 }

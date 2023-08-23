@@ -4,6 +4,8 @@ import picocli.CommandLine;
 import tec.bd.weather.ApplicationContext;
 import tec.bd.weather.entity.Forecast;
 
+import java.util.Date;
+
 @CommandLine.Command(name = "create-forecast", aliases = {"cf"}, description = "Create new forecast for a city")
 public class CreateForecastCommand implements Runnable {
 
@@ -18,6 +20,9 @@ public class CreateForecastCommand implements Runnable {
     @CommandLine.Parameters(paramLabel = "<zip code>", description = "The Zip code")
     private String zipCode;
 
+    @CommandLine.Parameters(paramLabel = "<forecast date>", description = "The Forecast date")
+    private Date forecastDate;
+
     @CommandLine.Parameters(paramLabel = "<temperature>", description = "Temperature value")
     private float temperature;
 
@@ -26,7 +31,7 @@ public class CreateForecastCommand implements Runnable {
         try {
             var appContext = new ApplicationContext();
             var weatherService = appContext.getWeatherService();
-            var newForecast = new Forecast(newForecastId, countryName, cityName, zipCode, temperature);
+            var newForecast = new Forecast(newForecastId, countryName, cityName, zipCode, forecastDate, temperature);
             weatherService.newForecast(newForecast);
             System.out.println(newForecast);
         } catch (Exception e) {

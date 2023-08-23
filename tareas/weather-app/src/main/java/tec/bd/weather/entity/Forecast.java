@@ -1,10 +1,14 @@
 package tec.bd.weather.entity;
 
+import java.util.Date;
+
 public class Forecast {
 
     private Integer id;
 
     private float temperature;
+
+    private Date forecastDate;
 
     private String cityName;
 
@@ -14,11 +18,12 @@ public class Forecast {
 
     public Forecast() { }
 
-    public Forecast(Integer id, String countryName, String cityName, String zipCode, float temperature) {
+    public Forecast(Integer id, String countryName, String cityName, String zipCode, Date forecastDate, float temperature) {
         this.id = id;
         this.countryName = countryName;
         this.cityName = cityName;
         this.zipCode = zipCode;
+        this.forecastDate = forecastDate;
         this.temperature = temperature;
     }
 
@@ -62,11 +67,20 @@ public class Forecast {
         this.countryName = countryName;
     }
 
+    public Date getForecastDate() {
+        return forecastDate;
+    }
+
+    public void setForecastDate(Date forecastDate) {
+        this.forecastDate = forecastDate;
+    }
+
     @Override
     public String toString() {
         return "Forecast {" +
                 "id = " + id +
                 ", temperature = " + temperature +
+                ", date = '" + forecastDate + '\'' +
                 ", country = '" + countryName + '\'' +
                 ", city = '" + cityName + '\'' +
                 ", zipCode = '" + zipCode + '\'' +
@@ -95,6 +109,12 @@ public class Forecast {
         }
         if (weather.getTemperature() < 0) {
             throw new RuntimeException("Weather forecast temperature invalid");
+        }
+        if (weather.getForecastDate() == null) { // se podría validar que la fecha se encuentre dentro de un rango
+            throw new RuntimeException("Weather forecast date is invalid");
+        }
+        if (weather.getForecastDate().after(new Date(System.currentTimeMillis()))) {
+            throw new RuntimeException("Weather forecast date is in the future");
         }
     }
 }
