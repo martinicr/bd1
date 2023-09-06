@@ -28,8 +28,8 @@ public class CreateForecastCommand implements Runnable {
         try {
             var appContext = new ApplicationContext();
             var weatherService = appContext.getWeatherService();
-            var newForecast = new Forecast(countryName, cityName, zipCode, forecastDate, temperature);
-            weatherService.newForecast(newForecast);
+            var forecastToBeCreated = new Forecast(countryName, cityName, zipCode, forecastDate, temperature);
+            var newForecast = weatherService.newForecast(forecastToBeCreated);
             System.out.println(newForecast);
         } catch (Exception e) {
             System.err.println("Can't create forecast. " +  e.getMessage());

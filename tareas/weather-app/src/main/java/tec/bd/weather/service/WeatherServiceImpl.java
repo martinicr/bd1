@@ -58,6 +58,9 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public Forecast updateForecast(Forecast forecast) {
         Forecast.validate(forecast);
+        if (forecast.getId() < 1) {
+            throw new RuntimeException("Invalid forecast Id " + forecast.getId());
+        }
         var current = this.weatherRepository.findById(forecast.getId());
         if (current.isEmpty()) {
             throw new RuntimeException("Weather forecast ID doesn't exists in database");

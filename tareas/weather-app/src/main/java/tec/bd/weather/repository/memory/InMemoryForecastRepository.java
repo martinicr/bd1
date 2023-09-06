@@ -9,8 +9,6 @@ public class InMemoryForecastRepository implements Repository<Forecast, Integer>
 
     private Set<Forecast> inMemoryForecastData;
 
-    private int currentMaxId = 0;
-
     public InMemoryForecastRepository() {
         // "inicializando" la base de datos
         this.inMemoryForecastData = new HashSet<>();

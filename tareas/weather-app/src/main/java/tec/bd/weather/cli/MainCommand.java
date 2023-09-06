@@ -9,6 +9,7 @@ import picocli.CommandLine;
                 ForecastByZipCodeCommand.class,
                 CreateForecastCommand.class,
                 UpdateForecastCommand.class,
+                RemoveForecastCommand.class,
                 CommandLine.HelpCommand.class,
                 AllForecastsCommand.class
         },
