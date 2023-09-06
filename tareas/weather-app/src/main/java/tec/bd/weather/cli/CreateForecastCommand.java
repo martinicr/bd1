@@ -9,9 +9,6 @@ import java.util.Date;
 @CommandLine.Command(name = "create-forecast", aliases = {"cf"}, description = "Create new forecast for a city")
 public class CreateForecastCommand implements Runnable {
 
-    @CommandLine.Parameters(paramLabel = "<forecast id>", description = "The new forecast id")
-    private int newForecastId;
-
     @CommandLine.Parameters(paramLabel = "<country name>", description = "The country name")
     private String countryName;
 
@@ -31,7 +28,7 @@ public class CreateForecastCommand implements Runnable {
         try {
             var appContext = new ApplicationContext();
             var weatherService = appContext.getWeatherService();
-            var newForecast = new Forecast(newForecastId, countryName, cityName, zipCode, forecastDate, temperature);
+            var newForecast = new Forecast(countryName, cityName, zipCode, forecastDate, temperature);
             weatherService.newForecast(newForecast);
             System.out.println(newForecast);
         } catch (Exception e) {

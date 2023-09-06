@@ -3,6 +3,8 @@ package tec.bd.weather.service;
 import tec.bd.weather.entity.Forecast;
 import tec.bd.weather.repository.Repository;
 
+import java.util.List;
+
 public class WeatherServiceImpl implements WeatherService {
 
     private Repository<Forecast, Integer> weatherRepository;
@@ -36,14 +38,21 @@ public class WeatherServiceImpl implements WeatherService {
     }
 
     @Override
-    public void newForecast(Forecast newForecast) {
+    public List<Forecast> getAllForecasts() {
+        // TODO: aqui podria ir logica de conversion de tipos
+
+        return this.weatherRepository.findAll();
+    }
+
+    @Override
+    public Forecast newForecast(Forecast newForecast) {
         Forecast.validate(newForecast);
         var current = this.weatherRepository.findById(newForecast.getId());
         if (current.isPresent()) {
             throw new RuntimeException("Weather forecast ID already exists in database");
         }
 
-        this.weatherRepository.save(newForecast);
+        return this.weatherRepository.save(newForecast);
     }
 
     @Override

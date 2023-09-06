@@ -2,7 +2,7 @@ package tec.bd.weather.service;
 
 import org.junit.jupiter.api.Test;
 import tec.bd.weather.entity.Forecast;
-import tec.bd.weather.repository.InMemoryForecastRepository;
+import tec.bd.weather.repository.memory.InMemoryForecastRepository;
 
 import java.util.Collections;
 import java.util.Date;
