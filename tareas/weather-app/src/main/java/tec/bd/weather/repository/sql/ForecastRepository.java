@@ -17,8 +17,23 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
     }
 
     @Override
-    public Optional<Forecast> findById(Integer integer) {
-        return Optional.empty();
+    public Optional<Forecast> findById(Integer forecastId) {
+        try (Connection connection = this.dataSource.getConnection();
+             PreparedStatement stmt = connection.prepareStatement(Queries.FIND_FORECAST_BY_ID)) {
+
+            stmt.setInt(1, forecastId);
+            var rs = stmt.executeQuery();
+
+            // loop through the result set
+            while (rs.next()) {
+                var forecast = this.fromResultSet(rs);
+                return Optional.of(forecast);
+            }
+
+            return Optional.empty();
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to retrieve forecasts", e);
+        }
     }
 
     @Override
@@ -57,7 +72,9 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
             stmt.setString(3, forecast.getZipCode());
             stmt.setDate(4, new java.sql.Date(forecast.getForecastDate().getTime()));
             stmt.setFloat(5, forecast.getTemperature());
-            stmt.executeUpdate();
+            var affectedRows = stmt.executeUpdate();
+
+            System.out.println("Affected Rows: " + affectedRows);
 
             ResultSet generatedKeys = stmt.getGeneratedKeys();
             if (generatedKeys.next()) {
@@ -71,13 +88,39 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
     }
 
     @Override
-    public void delete(Integer integer) {
+    public void delete(Integer forecastId) {
+        try (Connection connection = this.dataSource.getConnection();
+             PreparedStatement stmt = connection.prepareStatement(Queries.DELETE_FORECAST_BY_ID)) {
 
+            stmt.setInt(1, forecastId);
+            var affectedRows = stmt.executeUpdate();
+
+            System.out.println("Affected Rows: " + affectedRows);
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to save forecast", e);
+        }
     }
 
     @Override
-    public Forecast update(Forecast source) {
-        return null;
+    public Forecast update(Forecast forecast) {
+        try (Connection connection = this.dataSource.getConnection();
+             PreparedStatement stmt = connection.prepareStatement(Queries.UPDATE_FORECAST)) {
+
+            stmt.setString(1, forecast.getCountryName());
+            stmt.setString(2, forecast.getCityName());
+            stmt.setString(3, forecast.getZipCode());
+            stmt.setDate(4, new java.sql.Date(forecast.getForecastDate().getTime()));
+            stmt.setFloat(5, forecast.getTemperature());
+            stmt.setInt(6, forecast.getId());
+            int affectedRows = stmt.executeUpdate();
+
+            System.out.println("Affected Rows: " + affectedRows);
+
+            return forecast;
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to save forecast", e);
+        }
     }
 
     private Forecast fromResultSet(ResultSet rs) throws SQLException {
