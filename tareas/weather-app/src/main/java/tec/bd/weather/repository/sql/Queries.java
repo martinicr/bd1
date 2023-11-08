@@ -19,4 +19,14 @@ public class Queries {
             "country_name = ?, city_name = ?, zip_code = ?, forecast_date = ?, temperature = ? " +
             "WHERE forecast_id = ?";
 
+    // Country
+
+    public static final String FIND_ALL_COUNTRIES_PROC = "call find_all_countries(?)";
+
+    public static final String CREATE_COUNTRY_PROC = "call create_country(?, ?)";
+
+    public static final String DELETE_COUNTRY_BY_ID_PROC = "call delete_country(?)";
+
+    public static final String UPDATE_COUNTRY_PROC = "call update_country(?, ?)";
+
 }

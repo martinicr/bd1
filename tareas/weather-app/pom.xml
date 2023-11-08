@@ -5,7 +5,7 @@
 
   <groupId>tec.bd</groupId>
   <artifactId>weather-app</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.3-SNAPSHOT</version>
 
   <name>weather-app</name>
   <!-- FIXME change it to the project's website -->
@@ -20,8 +20,21 @@
     <maven.compiler.source>14</maven.compiler.source>
     <maven.compiler.target>14</maven.compiler.target>
 
+    <!-- compile -->
+    <hikari.version>5.0.1</hikari.version>
+    <jul-to-slf4j.version>1.7.32</jul-to-slf4j.version>
+    <logback.version>1.2.9</logback.version>
+    <logback-jul.version>1.7.32</logback-jul.version>
+    <mysql-connector.version>8.0.28</mysql-connector.version>
     <picocli.version>4.6.1</picocli.version>
+    <retrofit.version>2.5.0</retrofit.version>
     <sqlite.version>3.42.0.1</sqlite.version>
+
+    <!-- test -->
+    <assertj.version>3.19.0</assertj.version>
+    <junit.jupiter.version>5.7.1</junit.jupiter.version>
+    <mockito.version>3.8.0</mockito.version>
+    <mockserver.version>4.11.0</mockserver.version>
   </properties>
 
   <dependencies>
@@ -38,30 +51,76 @@
       <version>${sqlite.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql-connector.version}</version>
+    </dependency>
+
+    <dependency>
+    <groupId>com.zaxxer</groupId>
+    <artifactId>HikariCP</artifactId>
+    <version>${hikari.version}</version>
+  </dependency>
+
+    <dependency>
+      <groupId>com.squareup.retrofit2</groupId>
+      <artifactId>retrofit</artifactId>
+      <version>${retrofit.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.squareup.retrofit2</groupId>
+      <artifactId>converter-gson</artifactId>
+      <version>${retrofit.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>ch.qos.logback</groupId>-->
+<!--      <artifactId>logback-core</artifactId>-->
+<!--      <version>${logback.version}</version>-->
+<!--    </dependency>-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jul-to-slf4j</artifactId>
+      <version>${logback-jul.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${logback-jul.version}</version>
+    </dependency>
+
+
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.1</version>
+      <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.7.1</version>
+      <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>3.8.0</version>
+      <version>${mockito.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-junit-jupiter</artifactId>
-      <version>3.8.0</version>
+      <version>${mockito.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -69,7 +128,14 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.19.0</version>
+      <version>${assertj.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>mockwebserver</artifactId>
+      <version>${mockserver.version}</version>
       <scope>test</scope>
     </dependency>
 

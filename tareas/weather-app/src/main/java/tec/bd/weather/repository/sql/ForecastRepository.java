@@ -5,10 +5,15 @@ import tec.bd.weather.repository.Repository;
 
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Date;
+import java.util.Optional;
+import java.util.logging.*;
 
 public class ForecastRepository implements Repository<Forecast, Integer>  {
+
+    private static final Logger LOGGER = Logger.getLogger(ForecastRepository.class.getName());
 
     private final DataSource dataSource;
 
@@ -56,6 +61,7 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
             }
 
         } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Failed to retrieve forecast", e);
             throw new RuntimeException("Failed to retrieve forecasts", e);
         }
 
@@ -74,7 +80,7 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
             stmt.setFloat(5, forecast.getTemperature());
             var affectedRows = stmt.executeUpdate();
 
-            System.out.println("Affected Rows: " + affectedRows);
+            LOGGER.log(Level.INFO, "Affected Rows: {0}", affectedRows);
 
             ResultSet generatedKeys = stmt.getGeneratedKeys();
             if (generatedKeys.next()) {
@@ -83,6 +89,7 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
             }
             return forecast;
         } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Failed to save forecast", e);
             throw new RuntimeException("Failed to save forecast", e);
         }
     }
@@ -95,10 +102,11 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
             stmt.setInt(1, forecastId);
             var affectedRows = stmt.executeUpdate();
 
-            System.out.println("Affected Rows: " + affectedRows);
+            LOGGER.log(Level.INFO, "Affected Rows: {0}", affectedRows);
 
         } catch (SQLException e) {
-            throw new RuntimeException("Failed to save forecast", e);
+            LOGGER.log(Level.SEVERE, "Failed to delete forecast", e);
+            throw new RuntimeException("Failed to delete forecast", e);
         }
     }
 
@@ -115,11 +123,12 @@ public class ForecastRepository implements Repository<Forecast, Integer>  {
             stmt.setInt(6, forecast.getId());
             int affectedRows = stmt.executeUpdate();
 
-            System.out.println("Affected Rows: " + affectedRows);
+            LOGGER.log(Level.INFO, "Affected Rows: {0}", affectedRows);
 
             return forecast;
         } catch (SQLException e) {
-            throw new RuntimeException("Failed to save forecast", e);
+            LOGGER.log(Level.SEVERE, "Failed to update forecast", e);
+            throw new RuntimeException("Failed to update forecast", e);
         }
     }
 

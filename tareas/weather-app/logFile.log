@@ -1,0 +1,69 @@
+08:47:45.269 [main] INFO  tec.bd.weather.App - Application startup
+08:48:38.922 [main] INFO  tec.bd.weather.App - Application startup
+08:49:16.414 [main] INFO  tec.bd.weather.App - Application startup
+08:50:12.446 [main] INFO  tec.bd.weather.App - Application startup
+08:50:44.593 [main] INFO  tec.bd.weather.App - Application startup
+09:51:30.625 [main] INFO  tec.bd.weather.App - Application startup
+09:53:11.316 [main] INFO  tec.bd.weather.App - Application startup
+09:55:09.431 [main] INFO  tec.bd.weather.App - Application startup
+09:55:30.198 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+09:55:30.203 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+09:55:31.589 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+09:56:06.546 [main] INFO  tec.bd.weather.App - Application startup
+09:56:12.724 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+09:56:12.725 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+09:56:12.847 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:08:41.689 [main] INFO  tec.bd.weather.App - Application startup
+10:08:55.294 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:08:55.296 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:08:55.404 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:13:11.092 [main] INFO  tec.bd.weather.App - Application startup
+10:13:11.959 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:13:11.960 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:13:12.099 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:14:04.364 [main] INFO  tec.bd.weather.App - Application startup
+10:14:05.144 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:14:05.145 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:14:05.253 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:14:45.609 [main] INFO  tec.bd.weather.App - Application startup
+10:14:46.416 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:14:46.418 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:14:46.561 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:18:05.149 [main] INFO  tec.bd.weather.App - Application startup
+10:18:05.974 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:18:05.976 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:18:06.067 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:20:18.901 [main] INFO  tec.bd.weather.App - Application startup
+10:20:19.708 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:20:19.710 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:20:19.830 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:22:12.501 [main] INFO  tec.bd.weather.App - Application startup
+10:22:13.289 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:22:13.291 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:22:13.403 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:25:26.603 [main] INFO  tec.bd.weather.App - Application startup
+10:25:27.450 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:25:27.452 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:25:27.554 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:28:12.177 [main] INFO  tec.bd.weather.App - Application startup
+10:28:12.995 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:28:12.996 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:28:13.097 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:31:27.382 [main] INFO  tec.bd.weather.App - Application startup
+10:31:28.793 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:31:28.796 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:31:28.943 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+10:50:43.967 [main] INFO  tec.bd.weather.App - Application startup
+10:50:45.037 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:50:45.038 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+10:50:45.137 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+11:18:05.522 [main] INFO  tec.bd.weather.App - Application startup
+11:18:38.231 [main] INFO  tec.bd.weather.App - Application startup
+11:19:08.939 [main] INFO  tec.bd.weather.App - Application startup
+11:19:10.119 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+11:19:10.121 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+11:19:10.221 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
+11:19:26.527 [main] INFO  tec.bd.weather.App - Application startup
+11:19:27.605 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-126938395, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+11:19:27.606 [main] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.15_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:85535993, Valid from:3/12/19, 5:17 PM, Valid until:3/9/29, 5:17 PM
+11:19:27.695 [main] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.2, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, -126938395
